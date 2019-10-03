@@ -10,6 +10,7 @@ import SignupForm from './components/SignupForm';
 import Dashboard from './components/Dashboard';
 import requireAuth from './components/requireAuth';
 
+// instruct apollo to include cookies when making requests to the server
 const networkInterface = createNetworkInterface({
   uri: '/graphql',
   opts: {

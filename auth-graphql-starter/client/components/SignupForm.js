@@ -21,6 +21,7 @@ class SignupForm extends Component {
   onSubmit({ email, password }) {
     this.props.mutate({
       variables: { email, password },
+      // refetch the current user to login manually when mutation is done
       refetchQueries: [{ query }]
     }).catch(res => {
       const errors = res.graphQLErrors.map(error => error.message);
